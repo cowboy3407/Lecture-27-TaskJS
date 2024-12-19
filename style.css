@@ -1,0 +1,313 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #16325B;
+    height: 100vh;
+    width: 100vw;
+}
+
+#todolist {
+    display: flex;
+    justify-content: start;
+    padding-top: 50px;
+    align-items: center;
+    width: 30vw;
+    height: 70vh;
+    flex-direction: column;
+    gap: 2%;
+    background-color: #227B94;
+    border-radius: 15px;
+}
+
+#task-list {
+    list-style-type: none; 
+  }
+
+#header {
+    font-size: 70px;
+    color: #FFDC7F;
+}
+
+#text {
+    height: 50px;
+    width: 250px;
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+#btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    color: #FFDC7F;
+    background-color: #78B7D0;
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    padding-right: 5px;
+}
+
+.deletebtn {
+    height: 25px;
+    width: 70px;
+}
+
+.li {
+    font-size: 17px;
+}
+
+#btn:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+#text:focus {
+    border: 2px solid #16325B;
+    outline: none;
+}
+
+#task-list li {
+    display: flex;               
+    justify-content: space-between; 
+    align-items: center;          
+    font-size: 18px;
+    color: #FFDC7F;
+    background-color: #16325B;    
+    padding: 15px;                
+    margin-bottom: 15px;          
+    border-radius: 10px;          
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
+    width: 400px;
+}
+
+#task-list li:hover {
+    cursor: pointer; 
+    opacity: 90%;
+}
+
+#task-list li .checkbox {
+    margin-right: 15px; 
+}
+
+#task-list li .deletebtn {
+    padding: 5px 10px;          
+    background-color: #FF4D4D;  
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    text-align: center;
+}
+
+#task-list li .deletebtn:hover {
+cursor: pointer;
+opacity: 90%;
+}
+
+#task-list li .deletebtn:focus {
+    outline: none; 
+}
+
+#task-list li span {
+    flex-grow: 1;   
+    padding-right: 15px; 
+}
+
+@media (max-width: 1350px) {
+    #todolist {
+        width: 40vw;
+    }
+
+    #header {
+        font-size: 60px;
+    }
+
+    #text {
+        width: 230px;
+    }
+
+    #btn {
+        width: 140px;
+    }
+
+    #task-list li {
+        font-size: 17px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 1350px) {
+    #todolist {
+        width: 50vw; 
+    }
+
+    #header {
+        font-size: 60px;
+    }
+
+    #text {
+        font-size: 16px;
+    }
+
+    #btn {
+        font-size: 16px;
+    }
+
+    #task-list li {
+        font-size: 17px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 1050px) {
+    #todolist {
+        width: 60vw; 
+    }
+
+    #header {
+        font-size: 55px;
+    }
+
+    #text {
+        font-size: 15px;
+    }
+
+    #btn {
+        font-size: 15px;
+    }
+
+    #task-list li {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #task-list li .checkbox {
+        width: 22px;
+        height: 22px;
+    }
+
+    #task-list li .deletebtn {
+        height: 22px;
+        width: 65px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 777px) {
+    #todolist {
+        width: 80vw; 
+    }
+
+    #header {
+        font-size: 50px;
+    }
+
+    #text {
+        font-size: 14px;
+    }
+
+    #btn {
+        width: 20vw; 
+        font-size: 14px;
+    }
+
+    #task-list li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #task-list li .checkbox {
+        width: 20px;
+        height: 20px;
+    }
+
+    #task-list li .deletebtn {
+        height: 20px;
+        width: 60px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #todolist {
+        width: 80vw; 
+    }
+
+    #header {
+        font-size: 40px;
+    }
+
+    #text {
+        font-size: 14px;
+    }
+
+    #btn {
+        width: 20vw;
+        font-size: 14px;
+    }
+
+    #task-list li {
+        font-size: 13px;
+        padding: 8px;
+        width: 70vw;
+    }
+
+    #task-list li .checkbox {
+        width: 18px;
+        height: 18px;
+    }
+
+    #task-list li .deletebtn {
+        height: 18px;
+        width: 50px;
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    #text {
+    width: 50vw;
+    }
+    #btn {
+        width: 15vw;
+        font-size: 14px;
+    }
+
+    #task-list li {
+        font-size: 13px;
+        padding: 8px;
+        width: 70vw;
+    }
+
+    #task-list li .checkbox {
+        width: 18px;
+        height: 18px;
+    }
+
+    #task-list li .deletebtn {
+        height: 18px;
+        width: 50px;
+        font-size: 12px;
+    }
+}

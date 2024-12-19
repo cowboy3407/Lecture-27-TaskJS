@@ -12,7 +12,8 @@ function addTask(event) {
     }
 
     const li = document.createElement('li');
-
+    li.className = 'li';
+    
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.addEventListener('change', () => {
@@ -59,6 +60,7 @@ function loadData() {
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
+        checkbox.className = 'checkbox';
         checkbox.checked = task.completed;
         checkbox.addEventListener('change', () => {
             taskTextSpan.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
@@ -70,6 +72,7 @@ function loadData() {
         taskTextSpan.style.textDecoration = task.completed ? 'line-through' : 'none';
 
         const deleteBtn = document.createElement('button');
+        deleteBtn.className= 'deletebtn';
         deleteBtn.textContent = 'Delete';
         deleteBtn.addEventListener('click', () => {
             li.remove();
